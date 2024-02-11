@@ -1,0 +1,65 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %> <!-- head.js found in partials folder-->
+<body>
+  <div class="title">
+    <h1>Create a Post</h1>
+   </div> 
+    <%- include('./partials/nav.ejs') %> <!-- nav.js found in partials folder-->
+<div class="bg">
+
+<div class="center">
+  <div class="a">
+    <h2 style="font-weight:bold; text-align: center;" >Enter Access Code:</h2>
+    <input id="access" placeholder="Enter Secret Code" type="password" style="text-align: center;"/>
+    <button id="unlockForm" class=""  onclick="unlockForm()">ENTER</button>
+    <div class="center">
+    <a style="margin-top: 1em;" href="https://www.linkedin.com/in/phillip-rose-037856206/">Request a Code...</a>
+   </div>
+</div>
+</div>
+
+  <div id="hidden-form">
+    <div class="create-content">
+      <form action="/blogs" method="POST">
+        <div class="center-label">
+            <label for="title">Name :</label>
+            <input type="text" placeholder=" Your Name" id="title" name="title" required>
+        </div>
+        <div class="center-label">
+            <label for="snippet">Tagline :</label>
+            <input type="text" placeholder=" Description" id="snippet" name="snippet" required>
+        </div>
+        <div class="center">
+            <label for="body">Content :</label>
+        </div>
+        <div class="center">
+          <textarea id="body" placeholder=" An Encouraging Message..." name="body" required></textarea>
+        </div>
+        <div class="center">
+              <button>Submit</button>
+        </div>
+      </form>
+      </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+    </div>
+
+    <script>
+      var style = document.createElement('style');
+style.innerHTML =`#hidden-form {
+    visibility:visible;
+}`;
+    function unlockForm() {
+    if (document.getElementById('access').value == 'agape1914') {
+        document.head.appendChild(style);
+
+} else if (document.getElementById('access').value == 'Agape1914') {
+        document.head.appendChild(style);
+
+} else {
+        alert('Thats not Right... Check code... Need a code?     Text Phillip Rose Jr. @ 520-705-7637 ');
+    }
+};
+    </script>
+</body>
+</html>

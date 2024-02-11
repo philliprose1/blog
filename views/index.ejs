@@ -1,0 +1,28 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %> <!-- head.js found in partials folder-->
+<body>
+    <div class="title">
+        <h1>Phil Rose</h1>
+    </div>
+    <%- include('./partials/nav.ejs') %> <!-- nav.js found in partials folder-->
+
+    <div class="bg-posts">
+    <div class="blog-content">
+        <h2>All Messages</h2>
+
+        <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+     <a class="link" href="/blogs/<%= blog._id %>" >          
+            <h3 class="blog-title"><%= blog.title %></h3>
+            <p class="snippet"><%= blog.snippet %></p>
+    </a>    
+       <% }) %>     
+<% } else { %>
+    <p>No Blog Posts Yet...</p>
+    <% } %>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+    </div>
+</body>
+</html>

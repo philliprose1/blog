@@ -1,0 +1,72 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %> <!-- head.js found in partials folder-->
+<body>
+    <div class="title">
+        <h1>Message</h1>
+    </div>
+    <%- include('./partials/nav.ejs') %> <!-- nav.js found in partials folder-->
+
+<!-- need a lock for admin to delete 
+<div class="">
+
+    <p style="font-weight:bold">Admin:</p>
+</div>
+-->
+<div class="bg">
+<div id="input" class="admin">
+    <div class="a">
+        <h2 style="font-weight:bold; text-align: center;" >Admin:</h2>
+        <input id="answer" placeholder="Enter Secret Code" type="password" style="text-align: center;"/>
+        <button id="unlock" class=""  onclick="unlock()">ENTER</button>
+    </div>
+    
+</div>
+
+
+    <div class="details-content">
+        <h2><%- blog.title %></h2>
+        <div class="content">
+            <div class="message-content">
+            <p > <%- blog.body %> </p>
+            </div>
+        </div>
+
+        <div id="hidden">
+            <a class="delete" data-doc="<%= blog._id %>">Delete</a>
+        </div>
+    </div>
+   
+    <%- include('./partials/footer.ejs') %>
+
+<script>
+
+var style = document.createElement('style');
+style.innerHTML =`#hidden {
+    visibility:visible;
+}`;
+    function unlock() {
+    if (document.getElementById('answer').value == 'daniel244') { //it shall pass...
+        document.head.appendChild(style);
+
+} else {
+        alert('Thats not Right... Check code... Admin Only...');
+    }
+};
+
+
+    const trash = document.querySelector('a.delete');
+    trash.addEventListener('click', (e) => {
+        const endpoint = `/blogs/${trash.dataset.doc}`;
+
+        fetch(endpoint, {
+            method: 'DELETE'
+        })
+        .then((response) => response.json())
+        .then((data) => window.location.href = data.redirect)
+        .catch(err => console.log(err))
+    });
+
+</script>
+</div>
+</body>
+</html>

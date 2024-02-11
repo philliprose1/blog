@@ -1,0 +1,872 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Concert+One&family=Luckiest+Guy&family=Nosifer&display=swap');
+body {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding:0 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.blog-content {
+    background-color:rgba(112, 128, 144, 0.3);
+    backdrop-filter:blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 20px;
+    padding:2em;
+    margin-right:16px;
+}
+
+.bg-posts {
+    background-image:url('/hawaiiArial.jpg');
+   
+    background-size: contain;
+    padding:1em;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.bg {
+    padding:1em;
+    background-image: url('/paradise.jpg');
+    background-size: cover;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+.center-label {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+}
+a {
+    text-decoration: none;
+    color:navy;
+    text-shadow: .5px 1px .5px rgba(135, 206, 235, .9);
+}
+a:hover {
+    color:black;
+   }
+ul  {
+    list-style-type:circle;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(112, 128, 144, 0.3); 
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-style: solid;
+    border-color: navy;
+    border-bottom: hidden;
+}
+/* google fonts*/
+h1, label, ul{
+    font-family: Luckiest Guy;
+}
+h1 {
+    text-shadow: 1px 2px 1px rgba(135, 206, 235, .6);
+    padding:.5em;
+}
+.nos , button {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+h2, h3, p {
+    font-family:Concert One;
+    text-align: center;
+}
+.bilbo {
+    font-family: Bilbo Swash Caps;
+}
+footer {
+    background-color:rgba(112, 128, 144, 0.3);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-left: 20%;;
+    margin-right: 20%;
+    font-size: large;
+    text-align: center;
+    border-radius: 20px;
+}
+
+nav {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    text-transform: uppercase;
+    background-color: rgba(112, 128, 144, 0.3); 
+    border-style: solid;
+    border-color: navy;
+    border-top: hidden;
+    }
+    li {
+        padding:5px;
+    }
+    .blog-content, .about-content {
+        margin-left: 20px;
+    }
+    .create-content {
+        display: flex;
+        justify-content: center;
+    }
+    
+   form {
+        background-color: rgba(112, 128, 144, 0.3); 
+        backdrop-filter:blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+        margin-top:2em;
+        padding:1em;  
+        box-shadow: 1px 2px 1px black;
+    }
+    input {
+        margin-left:1em;
+    }
+    input:hover, textarea:hover {
+        background-color: rgba(135, 206, 235, .6);
+    }
+    textarea {
+        text-align: center;
+       height: 120px;
+       width:auto;
+       
+    }
+    button {
+        border-style: outset;
+        border-radius: 20px;
+        font-size: large;
+        color:navy;
+        background-color: whitesmoke;
+        box-shadow: 1px 2px 1px black;
+        cursor:pointer;
+    }
+    button:hover {
+        color:black;
+        background-color: rgba(135, 206, 235, .6);
+    }
+    .link {
+        display: block;
+        background-color: rgba(112, 128, 144, 0.3); 
+        border-radius: 20px;
+        border-style: outset;
+        border-color: navy;
+        margin-bottom: 1em;
+
+    }
+   .link:hover {
+    background-color: rgba(135, 206, 235, .6);
+   }
+   
+    .details-content {
+        position:relative;
+    }
+    #hidden, #hidden-form {
+        visibility: hidden;
+    }
+    .admin {
+    display: flex;
+    justify-content: flex-end;
+   
+    }
+    .delete {
+        position: absolute;
+        top:0;
+        right:0;
+        border-radius: 30px;
+        padding:.5em;
+        margin-top: 2px;
+        margin-right: 2px;
+    }
+    .delete:hover {
+        cursor:crosshair;
+        background-color: rgba(119, 136, 153 ,.6);
+    }
+    /* .a for admin for class*/  
+.a {
+    border-color: black;
+    padding: .5em;
+    background-color: rgba(112, 128, 144, 0.3); 
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-top:2em;
+    padding:1em;  
+    box-shadow: 1px 2px 1px black;
+}
+
+.logo {
+    height:10em;
+    width:auto;
+    border-radius: 30px;
+    margin-bottom: 1em;
+    border-style: outset;
+    border-color: navy;
+    box-shadow: 1px 2px 1px rgba(135, 206, 235, .9);
+}
+.bar {
+    background-color: navy;
+    padding: .5em;
+}
+.blog-title, .snippet {
+    text-align: center;
+}
+.about-phil, .details-content {
+    background-color:rgba(135, 206, 235, .6); 
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    margin-left:15%;
+    margin-right:15%;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: navy;
+    margin-top:1em;
+}
+p {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#error {
+    box-shadow: 1px 2px 1px navy;
+}
+
+
+/* breakpoints */
+@media only screen
+and (min-device-width: 600px)
+and (max-device-width: 767px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+
+    .bg-posts {
+        background-image:url('/hawaiiArial.jpg');
+        width:auto;
+        padding:1em;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .bg {
+        padding:1em;
+        background-image: url('/paradise.jpg');
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1em;
+    }
+    .center-label {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1em;
+    }
+    a {
+        text-decoration: none;
+        color:navy;
+        text-shadow: .5px 1px .5px rgba(135, 206, 235, .9);
+    }
+    a:hover {
+        color:black;
+       }
+    ul  {
+        list-style-type:circle;
+    }
+    .title {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(112, 128, 144, 0.3); 
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        border-style: solid;
+        border-color: navy;
+        border-bottom: hidden;
+    }
+    /* google fonts*/
+    h1, label, ul{
+        font-family: Luckiest Guy;
+    }
+    h1 {
+        text-shadow: 1px 2px 1px rgba(135, 206, 235, .6);
+        padding:.5em;
+    }
+    .nos , button {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
+    h2, h3, p {
+        font-family:Concert One;
+        text-align: center;
+    }
+    
+    footer {
+        font-family: Bilbo Swash Caps;
+        font-size: large;
+        text-align: center;
+    }
+    
+    nav {
+        display:flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        text-transform: uppercase;
+        background-color: rgba(112, 128, 144, 0.3); 
+        border-style: solid;
+        border-color: navy;
+        border-top: hidden;
+        }
+        li {
+            padding:5px;
+        }
+        .blog-content, .about-content {
+            margin-left: 20px;
+        }
+        .create-content {
+            display: flex;
+            justify-content: center;
+        }
+        
+       form {
+            background-color: rgba(112, 128, 144, 0.3); 
+            margin-top:2em;
+            padding:1em;  
+            box-shadow: 1px 2px 1px black;
+        }
+        input {
+            margin-left:1em;
+        }
+        input:hover, textarea:hover {
+            background-color: rgba(135, 206, 235, .6);
+        }
+        textarea {
+            text-align: center;
+           height: 120px;
+           width:auto;
+           
+        }
+        button {
+            border-style: outset;
+            border-radius: 20px;
+            font-size: large;
+            color:navy;
+            background-color: whitesmoke;
+            box-shadow: 1px 2px 1px black;
+            cursor:pointer;
+        }
+        button:hover {
+            color:black;
+            background-color: rgba(135, 206, 235, .6);
+        }
+        .link {
+            display: block;
+            background-color: rgba(112, 128, 144, 0.3); 
+            border-radius: 20px;
+            border-style: outset;
+            border-color: navy;
+            margin-bottom: 1em;
+    
+        }
+       .link:hover {
+        background-color: rgba(135, 206, 235, .6);
+       }
+       
+        .details-content {
+            position:relative;
+        }
+        #hidden {
+            visibility: hidden;
+        }
+        .admin {
+        display: flex;
+        justify-content: flex-end;
+       
+        }
+        .delete {
+            position: absolute;
+            top:0;
+            right:0;
+            border-radius: 30px;
+            padding:.5em;
+            margin-top: 2px;
+            margin-right: 2px;
+        }
+        .delete:hover {
+            cursor:crosshair;
+            background-color: rgba(119, 136, 153 ,.6);
+        }
+  
+    .a { 
+        border-color: black;
+        padding: .5em;
+        background-color: rgba(112, 128, 144, 0.3); 
+        margin-top:2em;
+        padding:1em;  
+        box-shadow: 1px 2px 1px black;
+    }
+    
+    .logo {
+        height:5em;
+        width:auto;
+        border-radius: 30px;
+        margin-bottom: 1em;
+        border-style: outset;
+        border-color: navy;
+        box-shadow: 1px 2px 1px rgba(135, 206, 235, .9);
+    }
+    .bar {
+        background-color: navy;
+        padding: .5em;
+    }
+    .blog-title, .snippet {
+        text-align: center;
+    }
+    .about-phil, .details-content {
+        background-color:rgba(135, 206, 235, .6); 
+        margin-left:15%;
+        margin-right:15%;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: navy;
+        margin-top:1em;
+    }
+    p {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}
+
+@media only screen
+and (min-device-width: 425px)
+and (max-device-width: 600px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+    .bg-posts {
+        background-image:url('/hawaiiArial.jpg');
+        width:auto;
+        padding:1em;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .bg {
+        padding:1em;
+        background-image: url('/paradise.jpg');
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1em;
+    }
+    .center-label {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1em;
+    }
+    a {
+       
+        text-decoration: none;
+        color:navy;
+        text-shadow: .5px 1px .5px rgba(135, 206, 235, .9);
+    }
+    a:hover {
+        color:black;
+       }
+    ul  {
+        list-style-type:circle;
+        font-size: small;
+    }
+    .title {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(112, 128, 144, 0.3); 
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        border-style: solid;
+        border-color: navy;
+        border-bottom: hidden;
+    }
+    /* google fonts*/
+    h1, label, ul{
+        font-family: Luckiest Guy;
+    }
+    h1 {
+        text-shadow: 1px 2px 1px rgba(135, 206, 235, .6);
+        padding:.5em;
+        font-size:medium;
+    }
+    .nos , button {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
+    .nos {
+        font-size:x-small;
+    }
+    h2, h3, p {
+        font-family:Concert One;
+        text-align: center;
+    }
+    
+    footer {
+        font-family: Bilbo Swash Caps;
+        font-size: large;
+        text-align: center;
+    }
+    
+    nav {
+        display:flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        text-transform: uppercase;
+        background-color: rgba(112, 128, 144, 0.3); 
+        border-style: solid;
+        border-color: navy;
+        border-top: hidden;
+        }
+        li {
+            padding:5px;
+        }
+        .blog-content, .about-content {
+            margin-left: 20px;
+        }
+        .create-content {
+            display: flex;
+            justify-content: center;
+        }
+        
+       form {
+            background-color: rgba(112, 128, 144, 0.6); 
+            margin-top:2em;
+            padding:1em;  
+            box-shadow: 1px 2px 1px black;
+        }
+        input {
+            margin-left:1em;
+        }
+        input:hover, textarea:hover {
+            background-color: rgba(135, 206, 235, .6);
+        }
+        textarea {
+            text-align: center;
+           height: 120px;
+           width:auto;
+           
+        }
+        button {
+            border-style: outset;
+            border-radius: 20px;
+            font-size: large;
+            color:navy;
+            background-color: whitesmoke;
+            box-shadow: 1px 2px 1px black;
+            cursor:pointer;
+        }
+        button:hover {
+            color:black;
+            background-color: rgba(135, 206, 235, .6);
+        }
+        .link {
+            display: block;
+            background-color: rgba(112, 128, 144, 0.3); 
+            border-radius: 20px;
+            border-style: outset;
+            border-color: navy;
+            margin-bottom: 1em;
+    
+        }
+       .link:hover {
+        background-color: rgba(135, 206, 235, .6);
+       }
+       
+        .details-content {
+            position:relative;
+        }
+        #hidden {
+            visibility: hidden;
+        }
+        .admin {
+        display: flex;
+        justify-content: flex-end;
+       
+        }
+        .delete {
+            position: absolute;
+            top:0;
+            right:0;
+            border-radius: 30px;
+            padding:.5em;
+            margin-top: 2px;
+            margin-right: 2px;
+        }
+        .delete:hover {
+            cursor:crosshair;
+            background-color: rgba(119, 136, 153 ,.6);
+        }
+    .a {
+        border-color: black;
+        padding: .5em;
+        background-color: rgba(112, 128, 144, 0.3); 
+        margin-top:2em;
+        padding:1em;  
+        box-shadow: 1px 2px 1px black;
+    }
+    
+    .logo {
+        height:3em;
+        width:auto;
+        border-radius: 30px;
+        margin-bottom: 1em;
+        border-style: outset;
+        border-color: navy;
+        box-shadow: 1px 2px 1px rgba(135, 206, 235, .9);
+    }
+    .bar {
+        background-color: navy;
+        padding: .5em;
+    }
+    .blog-title, .snippet {
+        text-align: center;
+    }
+    .about-phil, .details-content {
+        background-color:rgba(135, 206, 235, .6); 
+        backdrop-filter:blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        margin-left:15%;
+        margin-right:15%;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: navy;
+        margin-top:1em;
+    }
+    p {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+ 
+
+}
+
+@media only screen
+and (min-device-width: 200px)
+and (max-device-width: 425px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+    .bg-posts {
+        background-image:url('/hawaiiArial.jpg');
+        width:auto;
+        padding:1em;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .bg {
+        padding:1em;
+        background-image: url('/paradise.jpg');
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1em;
+    }
+    .center-label {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1em;
+    }
+    a {
+       
+        text-decoration: none;
+        color:navy;
+        text-shadow: .5px 1px .5px rgba(135, 206, 235, .9);
+        font-size: xx-small;
+    }
+    a:hover {
+        color:black;
+       }
+    ul  {
+        list-style-type:circle;
+        font-size: small;
+    }
+    .title {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(112, 128, 144, 0.3); 
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        border-style: solid;
+        border-color: navy;
+        border-bottom: hidden;
+    }
+    /* google fonts*/
+    h1, label, ul{
+        font-family: Luckiest Guy;
+    }
+    h1 {
+        text-shadow: 1px 2px 1px rgba(135, 206, 235, .6);
+        padding:.5em;
+        font-size:medium;
+    }
+    .nos , button {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
+    .nos {
+        font-size:xx-small;
+    }
+    h2, h3, p {
+        font-family:Concert One;
+        text-align: center;
+    }
+    
+    footer {
+        font-family: Bilbo Swash Caps;
+        font-size: large;
+        text-align: center;
+    }
+    
+    nav {
+        display:flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        text-transform: uppercase;
+        background-color: rgba(112, 128, 144, 0.3); 
+        border-style: solid;
+        border-color: navy;
+        border-top: hidden;
+        }
+        li {
+            padding:5px;
+        }
+        .blog-content, .about-content {
+            margin-left: 20px;
+        }
+        .create-content {
+            display: flex;
+            justify-content: center;
+        }
+        
+       form {
+            background-color: rgba(112, 128, 144, 0.6); 
+            margin-top:2em;
+            padding:.5em;  
+            box-shadow: 1px 2px 1px black;
+        }
+        label {
+            font-size: x-small;
+        }
+        input {
+            margin-left:.5em;
+            font-size: small;
+        }
+        input:hover, textarea:hover {
+            background-color: rgba(135, 206, 235, .6);
+        }
+        textarea {
+            text-align: center;
+           height: 120px;
+           width:auto;
+           
+        }
+        button {
+            border-style: outset;
+            border-radius: 20px;
+            font-size: large;
+            color:navy;
+            background-color: whitesmoke;
+            box-shadow: 1px 2px 1px black;
+            cursor:pointer;
+            margin-top:.5em;
+        }
+        button:hover {
+            color:black;
+            background-color: rgba(135, 206, 235, .6);
+        }
+        .link {
+            display: block;
+            background-color: rgba(112, 128, 144, 0.3); 
+            border-radius: 20px;
+            border-style: outset;
+            border-color: navy;
+            margin-bottom: 1em;
+    
+        }
+       .link:hover {
+        background-color: rgba(135, 206, 235, .6);
+       }
+       
+        .details-content {
+            position:relative;
+        }
+        #hidden {
+            visibility: hidden;
+        }
+        .admin {
+        display: flex;
+        justify-content: flex-end;
+       
+        }
+        .delete {
+            position: absolute;
+            top:0;
+            right:0;
+            border-radius: 30px;
+            padding:.5em;
+            margin-top: 2px;
+            margin-right: 2px;
+        }
+        .delete:hover {
+            cursor:crosshair;
+            background-color: rgba(119, 136, 153 ,.6);
+        }
+    .a {
+        border-color: black;
+        padding: .5em;
+        background-color: rgba(112, 128, 144, 0.3); 
+        margin-top:1em; 
+        box-shadow: 1px 2px 1px black;
+        text-align: center;
+    }
+    #unlock {
+        margin-top: .5em;
+    }
+    .logo-wrap {
+        position:absolute;
+        margin-right:75%;
+        margin-left:25%;
+        margin-bottom:10%;
+        margin-top:10;
+    }
+    .logo {
+        
+        height:3em;
+        width:auto;
+        border-radius: 30px;
+        border-style: outset;
+        border-color: navy;
+        box-shadow: 1px 2px 1px rgba(135, 206, 235, .9);
+    }
+    .bar {
+        background-color: navy;
+        padding: .5em;
+    }
+    .blog-title, .snippet {
+        text-align: center;
+    }
+    .about-phil, .details-content {
+        background-color:rgba(135, 206, 235, .6); 
+        backdrop-filter:blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        margin-left:5%;
+        margin-right:5%;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: navy;
+        margin-top:1em;
+    }
+    p {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: small;
+    }
+}
