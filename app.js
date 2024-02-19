@@ -1,7 +1,7 @@
 const express = require('express');
 //const serverless = require('serverless-http');  <--- not using yet...
 const mongoose = require('mongoose');
-const Blog = require('./models/blog');
+const Blog = require('./api/models/blog');
 //const router = express.Router();
 
 //express app
@@ -138,3 +138,4 @@ app.use((req, res) =>{
   res.status(404).render('404',{title: 'Page Not Found'});  
 });
 
+module.exports = app;
