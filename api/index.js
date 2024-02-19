@@ -1,22 +1,9 @@
-
-
-
-
 const express = require('express');
-//const serverless = require('serverless-http');  <--- not using yet...
 const  mongoose = require('mongoose');
 const Blog = require('./models/blog');
-//const router = express.Router();
 
 //express app
 const app = express();
-
-//handler 
-//module.exports.handler = serverless(app);
-
- //router
- //app.use('/.netlify/functions/app',router);
-
 
 // connect to database
 const db = 'mongodb+srv://admin:Trustno1@cluster0.frzgx.mongodb.net/blogs';
@@ -25,52 +12,17 @@ mongoose.connect(db)
 .catch((err) => console.log(err));
 
 //add view engine
-app.set("views",__dirname + "/views")
+app.set("views",__dirname + "/views") // __dirname needed for vercel
 app.set('view engine', 'ejs');
 
 
 //middleware for public static files
-app.use(express.static(__dirname + "public")) ;
+
+app.use(express.static(__dirname + "/public")) ; //for vercel error
 //app.use(express.static('public')); //files made available to the front end
+
 app.use(express.urlencoded({extended: true})); // now you can use req.body in app.post request (for info in webform) need name attribute and action POST on create.ejs
-/* save new blog to database / test routes
-
-app.get('/add', (req, res) => {  
-    const blog = new Blog({
-        title: 'new blog',
-        snippet: 'about new blog',
-        body: 'blog content'
-    });
-    blog.save()
-    .then((result) => {
-        res.send(result)
-    })
-    .catch((err) => {
-        console.log(err)
-    })
-});
-
-app.get('/all', (req, res) => {   //find all blogs from db
-    Blog.find()
-    .then((result) => {
-        res.send(result)
-    })
-    .catch((err) => {
-        console.log(err)
-    })
-});
-
-app.get('/single', (req, res) => {
-    Blog.findById('653ebe4ab56ed36f2c1fe038')
-    .then((result) => {
-        res.send(result)
-    })
-    .catch((err) => {
-        console.log(err)
-    })
-});
-
-*/
+/* save new blog to database / test routes */
 
 //routes
 app.get('/', (req, res) => {
@@ -87,7 +39,7 @@ app.get('/blogs', (req, res) => {
     .catch((err) => {
         console.log(err)
     })
-})
+});
 
 app.post('/blogs', (req, res) => {
     //console.log(req.body);
@@ -104,7 +56,7 @@ app.post('/blogs', (req, res) => {
 
 app.get('/blogs/create', (req, res) => {
     res.render('create',{title: 'Create Post'});
-})
+});
 
 
 app.get('/blogs/:id', (req, res) => {
@@ -131,7 +83,7 @@ app.delete('/blogs/:id', (req, res) => {
     console.log(err);
 })
 
-})
+});
 //redirect if needed later
 /*
 app.get('/about-oldpage', (req, res) => {
